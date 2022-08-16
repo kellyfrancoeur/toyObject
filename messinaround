@@ -1,0 +1,163 @@
+/*
+    Problem/output:
+        Solar Eclipse Bank has a problem. They want to have an automated
+        way to display the customer birthdays, for each month, for the
+        next 10 years. They would like to see the customer's name, and their
+        current age, displayed in the correct month. Here's an example they
+        provided of how they would like the data displayed.
+
+        2022
+        "February"
+        ---------------
+        Miles Goodworth is n years old
+        Barbara Forsythe is n years old
+
+        2022
+        "March"
+        ---------------
+
+
+        2022
+        "April"
+        ---------------
+        Lisa Jackson is n years old
+        Michael Weathersby is n years old
+*/
+
+
+// Define an array containing year integers
+const years = [ 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030, 2031 ]
+// for (let i = 0; i < years.length; i++){
+//     console.log(years[i])
+// }
+
+// Define an array for all month names as strings
+const months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+// for (let j = 0; j < months.length; j++){
+//     console.log(months[j])
+// }
+
+
+// Define an array of objects representing the customers
+const customers = [
+    {   firstName: "William", 
+        lastName: "Johnson", 
+        id: 1, yearBorn: 1970, 
+        monthBorn: "June" },
+
+    {   firstName: "Halle", 
+        lastName: "Johnson", 
+        id: 2, yearBorn: 1988, 
+        monthBorn: "September" },
+
+    {   firstName: "Santina", 
+        lastName: "Veum", 
+        id: 3, 
+        yearBorn: 1994, 
+        monthBorn: "October" },
+
+    {   firstName: "Camylle", 
+        lastName: "Ward", 
+        id: 4, 
+        yearBorn: 1965, 
+        monthBorn: "June" },
+
+    {   firstName: "Paula", 
+        lastName: "Green", 
+        id: 5, 
+        yearBorn: 1983, 
+        monthBorn: "January" },
+
+    {   firstName: "Russel", 
+        lastName: "Bayer", 
+        id: 6, 
+        yearBorn: 1977, 
+        monthBorn: "July" },
+
+    {   firstName: "Jovan", 
+        lastName: "Gutmann", 
+        id: 7, 
+        yearBorn: 1999, 
+        monthBorn: "March" },
+
+    {   firstName: "Darrel", 
+        lastName: "Metz", 
+        id: 8, 
+        yearBorn: 1993, 
+        monthBorn: "December" },
+
+    {   firstName: "Eveline", 
+        lastName: "Feil", 
+        id: 9, 
+        yearBorn: 1978, 
+        monthBorn: "March" }
+]
+
+//define a variable and declare a function in an empty parentheses
+
+const customerInfo = () => {
+//declare a variable to open a string to begin listing customer information
+    let customerInfoString = ""
+//begin building string by using a for loop to iterate through each year and list individually
+    for (let i = 0; i < years.length; i++){
+    customerInfoString += (years[i])
+    }
+//use another for loop to iterate through each month and list individually
+        for (let j = 0; j < months.length; j++){
+        customerInfoString += (months[j])
+        }
+            for (let age of customers){
+                age.yearBorn = (years[i] - customers.yearBorn)
+                customerInfoString += (`${customers.firstName} ${customers.lastName} is ${age.yearBorn} years old.`)
+            }
+    }
+    console.log (customerInfo())
+
+
+
+
+
+
+// for (const toy of toys){
+//     toy.price = toy.price * 1.05
+//     console.log(`The name of the toy is ${toy.name}, made by ${toy.maker}, released in ${toy.released}, and the price is $${toy.price}`)
+// }
+// //const names = users.map(users => user.name); console.log(names) - would display just the names
+
+// const flowersAsHTML = () => {
+//     let flowersHTMLString = ""  // Do not modify
+//     //we are building a string for flowersHTMLString that needs to start with "<article>"
+//     flowersHTMLString = "<article> \n"
+//     //iterate through flowers array to list the type property from each object
+//     for (const flower of flowers){
+//         flowersHTMLString += (`<h1> ${flower.type} </h1> \n`)
+//     //then the title <h2>Colors</h2>
+//         flowersHTMLString += (`<h2> Colors </h2> \n` )
+//     //next need to iterate through each property to list the colors
+//         for (const color of flower.colors){
+//        // const section = (`<section> ${color} </section> \n`)
+//        // flowersHTMLString += section
+//        // console.log (`<section> ${color} </section>`)  
+//        flowersHTMLString += (`<section> ${color} </section> \n`)}
+//          flowersHTMLString += ("<h2> USDA Zones </h2> \n")
+//     //next iterate through each property to list zones
+//     for (const zone of flower.usdaZones){
+//       //  const section = `<section> ${zone} </section>`
+//         //flowersHTMLString += section
+//         flowersHTMLString += (`<div> ${zone} </div> \n`) 
+//     }
+//     flowersHTMLString += "</article> \n"
+//     }
+
+//     /*
+//         Algorithmic thinking is most important on this one.
+//         We would rather see the correct algorithm than the
+//         correct code. If you have code that works, but no
+//         algorithm, then you failed the exercise.
+//     */
+
+
+//     return flowersHTMLString  // Do not modify
+
+// }
+// console.log (flowersAsHTML())
